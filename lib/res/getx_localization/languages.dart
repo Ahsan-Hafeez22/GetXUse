@@ -6,6 +6,10 @@ class Languages extends Translations {
         'en_US': {
           'name': 'Ahsan',
           'message': 'I am a Flutter Developer',
+          'email_hint': 'Enter you email',
+          'password_hint': 'Enter you password',
+          'login_now': 'Login Now!',
+          'empty': 'Empty Field',
         },
         'es_ES': {
           'name': 'Ahsan',

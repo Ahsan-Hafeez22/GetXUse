@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxproject/Utils/home_screen.dart';
-import 'package:getxproject/Utils/languages.dart';
-import 'package:getxproject/Pages/screen_one.dart';
-import 'package:getxproject/Pages/screen_three.dart';
-import 'package:getxproject/Pages/screen_two.dart';
+import 'package:getxproject/res/route/routes.dart';
+// import 'package:getxproject/view/Pages/home_screen.dart';
+import 'package:getxproject/res/getx_localization/languages.dart';
+import 'package:getxproject/res/route/routes_name.dart';
+// import 'package:getxproject/view/Screen/splash_screen.dart';
+// import 'package:getxproject/view/Pages/screen_one.dart';
+// import 'package:getxproject/view/Pages/screen_three.dart';
+// import 'package:getxproject/view/Pages/screen_two.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -24,28 +27,31 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       translations: Languages(),
-      // locale: Locale('en', 'US'),
       fallbackLocale: Locale('en', 'US'),
-      getPages: [
-        GetPage(
-          name: '/',
-          page: () => const HomeScreen(),
-        ),
-        GetPage(
-          name: '/screen_one',
-          page: () => const ScreenOne(),
-        ),
-        GetPage(
-          name: '/screen_two',
-          page: () => ScreenTwo(
-            name: "",
-          ),
-        ),
-        GetPage(
-          name: '/screen_three',
-          page: () => ScreenThree(),
-        ),
-      ],
+      initialRoute: RoutesName.splashScreen, // Set initial route
+      getPages: AppRoutes.appRoutes(),
+      // locale: Locale('en', 'US'),
+      // getPages: [
+      //   GetPage(
+      //     name: '/',
+      //     page: () => const HomeScreen(),
+      //   ),
+      //   GetPage(
+      //     name: '/screen_one',
+      //     page: () => const ScreenOne(),
+      //   ),
+      //   GetPage(
+      //     name: '/screen_two',
+      //     page: () => ScreenTwo(
+      //       name: "",
+      //     ),
+      //   ),
+      //   GetPage(
+      //     name: '/screen_three',
+      //     page: () => ScreenThree(),
+      //   ),
+      // ],
+      // home: SplashScreen(),
     );
   }
 }
