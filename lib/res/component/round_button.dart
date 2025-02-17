@@ -27,7 +27,7 @@ class RoundButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: buttonColor, borderRadius: BorderRadius.circular(20.0)),
         child: loading
-            ? Center(child: CircularProgressIndicator())
+            ? Center(child: CircularProgressIndicator.adaptive())
             : Center(
                 child: Text(
                   title,

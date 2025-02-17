@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       child: TextFormField(
         controller: controller,
         focusNode: focusNode,
@@ -35,9 +35,11 @@ class CustomTextField extends StatelessWidget {
           return null;
         },
         decoration: InputDecoration(
-          fillColor: AppColor.whiteColor,
+          fillColor: AppColor.textFieldColor,
           hintText: hintText.tr,
+          filled: true,
           border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(color: AppColor.blackColor),
           ),
         ),

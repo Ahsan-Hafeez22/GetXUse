@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxproject/res/color/color.dart';
@@ -17,6 +19,7 @@ class _LoginViewState extends State<LoginView> {
   final _key = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height * 1;
     return Scaffold(
       backgroundColor: Colors.tealAccent,
       body: Column(
@@ -25,8 +28,9 @@ class _LoginViewState extends State<LoginView> {
           Text('login_now'.tr,
               style: TextStyle(
                   color: AppColor.blackColor,
-                  fontSize: 25,
+                  fontSize: 42,
                   fontWeight: FontWeight.bold)),
+          SizedBox(height: height * 0.1),
           Form(
             key: _key,
             child: Column(
@@ -46,11 +50,18 @@ class _LoginViewState extends State<LoginView> {
               ],
             ),
           ),
-          RoundButton(
-              title: "Login",
-              onPress: () {
-                if (_key.currentState!.validate()) {}
-              })
+          SizedBox(height: height * 0.05),
+          Obx(
+            () => RoundButton(
+                title: "Login",
+                loading: _loginViewModel.loading.value,
+                onPress: () {
+                  log(_loginViewModel.loading.value.toString());
+                  if (_key.currentState!.validate()) {
+                    _loginViewModel.loginApi();
+                  }
+                }),
+          )
         ],
       ),
     );
