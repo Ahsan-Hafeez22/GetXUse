@@ -10,6 +10,10 @@ class Languages extends Translations {
           'password_hint': 'Enter you password',
           'login_now': 'Login Now!',
           'empty': 'Empty Field',
+          'internet_connection':
+              'We are unable to show results, Please check your connection and try again later :)',
+          'general_exception':
+              'We are unable to process your request, Please try again later :)'
         },
         'es_ES': {
           'name': 'Ahsan',

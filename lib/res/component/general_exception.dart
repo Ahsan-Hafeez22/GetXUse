@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxproject/res/component/round_button.dart';
 
-class InternetExceptionWidget extends StatelessWidget {
+class GeneralException extends StatelessWidget {
   final VoidCallback onpress;
-  const InternetExceptionWidget({super.key, required this.onpress});
+
+  const GeneralException({super.key, required this.onpress});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class InternetExceptionWidget extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'internet_connection'.tr,
+                'general_exception'.tr,
                 style: TextStyle(
                   color: Colors.grey[800],
                 ),

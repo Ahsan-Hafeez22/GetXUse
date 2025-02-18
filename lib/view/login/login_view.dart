@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:getxproject/res/color/color.dart';
 import 'package:getxproject/res/component/round_button.dart';
 import 'package:getxproject/res/component/text_field.dart';
-import 'package:getxproject/view_model/controller/login_view_model.dart';
+import 'package:getxproject/view_model/controller/login/login_view_model.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});

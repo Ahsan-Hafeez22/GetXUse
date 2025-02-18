@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxproject/SharedPref/shared_pref.dart';
+import 'package:getxproject/res/SharedPref/shared_pref.dart';
 import 'package:getxproject/Controller/slider_controller.dart';
 
 class ScreenTwo extends StatelessWidget {
